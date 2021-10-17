@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gnome-shell-extension-just-perfection
+Source: https://github.com/Muqtxdir/gnome-shell-extension-just-perfection
+
+Files: *
+Copyright: 2021 Javad Rahmatzadeh
+License: GPLv3

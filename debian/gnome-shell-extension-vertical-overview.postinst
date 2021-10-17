@@ -1,0 +1,40 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+error()
+{
+    RET=$?
+    MSG=$1
+    echo "E: $MSG";
+    exit $RET
+}
+
+case "$1" in
+    configure)
+        update-alternatives \
+            --install /usr/share/plymouth/themes/default.plymouth default.plymouth \
+                /usr/share/plymouth/themes/ubuntu-bgrt/ubuntu-bgrt.plymouth 200 || error "Failed to update-alternatives"
+
+        if [ -f /usr/share/plymouth/ubuntu-logo.png ]; then
+            mv /usr/share/plymouth/ubuntu-logo.png /usr/share/plymouth/ubuntu-logo.png.bak || error "Failed to create ubuntu-logo backup"
+            ln -s /usr/share/plymouth/themes/ubuntu-bgrt/watermark.png /usr/share/plymouth/ubuntu-logo.png || error "Failed to create symlink to watermark.png"
+        else
+            ln -s /usr/share/plymouth/themes/ubuntu-bgrt/watermark.png /usr/share/plymouth/ubuntu-logo.png || error "Failed to create symlink to watermark.png"
+        fi       
+        
+        if which update-initramfs >/dev/null 2>&1; then
+            update-initramfs -u || error "Failed to update-initramfs"
+        fi
+        ;;
+
+    abort-upgrade|abort-deconfigure|abort-remove)
+        ;;
+
+    *)
+        echo "$0 called with unknown argument \`$1'" 1>&2
+        exit 1
+        ;;
+esac
+
+exit 0

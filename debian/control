@@ -1,0 +1,13 @@
+Source: gnome-shell-extension-just-perfection
+Section: gnome
+Priority: optional
+Maintainer: Muqtadir <muqtadir5555@gmail.com>
+Build-Depends: debhelper (>= 10), libglib2.0-bin
+Standards-Version: 3.9.8
+Homepage: https://github.com/Muqtxdir/gnome-shell-extension-just-perfection
+Vcs-Git: https://github.com/Muqtxdir/gnome-shell-extension-just-perfection.git
+
+Package: gnome-shell-extension-just-perfection
+Architecture: all
+Depends: gnome-shell (>= 40), ${misc:Depends}
+Description: gnome-shell-extension to customize and tweak GNOME-Shell UI elements
