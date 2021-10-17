@@ -1,10 +1,12 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE = 1
 
+BASEDIR=debian/gnome-shell-extension-vertical-overview/usr/share/gnome-shell/extensions/vertical-overview@RensAlthuis.github.com
+
 %:
 	dh $@ --buildsystem=meson
 
 override_dh_install:
 	# delete schema-directory.
-	rm -r debian/tmp/usr/share/gnome-shell/extensions/just-perfection-desktop@just-perfection/schemas
+	rm -rf $(BASEDIR)/schemas
 	dh_install
