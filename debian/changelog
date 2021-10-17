@@ -1,3 +1,9 @@
+gnome-shell-extension-just-perfection (21.10.1ubuntu1) impish; urgency=medium
+
+  * added meson as dependency
+
+ -- Muqtadir <muqtadir5555@gmail.com>  Mon, 18 Oct 2021 00:30:10 +0530
+
 gnome-shell-extension-just-perfection (21.10.1) impish; urgency=medium
 
   * Initial release.
