@@ -1,11 +1,5 @@
-gnome-shell-extension-just-perfection (21.10.1ubuntu1) impish; urgency=medium
+gnome-shell-extension-just-perfection (20.04.3) focal; urgency=medium
 
-  * added meson as dependency
+  * package for ubuntu-desktop-20.04
 
- -- Muqtadir <muqtadir5555@gmail.com>  Mon, 18 Oct 2021 00:30:10 +0530
-
-gnome-shell-extension-just-perfection (21.10.1) impish; urgency=medium
-
-  * Initial release.
-
- -- Muqtadir <muqtadir5555@gmail.com>  Sun, 17 Oct 2021 19:51:14 +0530
+ -- Muqtadir <muqtadir5555@gmail.com>  Tue, 07 Dec 2021 22:37:42 +0530

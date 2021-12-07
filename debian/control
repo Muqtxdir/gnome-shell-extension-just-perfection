@@ -10,5 +10,5 @@ Vcs-Git: https://github.com/Muqtxdir/gnome-shell-extension-just-perfection.git
 
 Package: gnome-shell-extension-just-perfection
 Architecture: all
-Depends: gnome-shell (>= 40), ${misc:Depends}
+Depends: gnome-shell (>= 3.36), ${misc:Depends}
 Description: gnome-shell-extension to customize and tweak GNOME-Shell UI elements
